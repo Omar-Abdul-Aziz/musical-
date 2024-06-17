@@ -1,0 +1,35 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.swim-lanes {
+  min-height: 60vh;
+}
+
+.card-body {
+  min-height: 200px;
+}
+
+.task-card {
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+}
+
+.task-card:hover {
+  cursor: grab;
+}
+
+.task-card.dragging {
+  cursor: grabbing;
+}
+
+.due-soon {
+  border-left: 10px solid yellow;
+}
+
+.overdue {
+  border-left: 10px solid red;
+}
