@@ -17,14 +17,20 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header class="p-4 mb-4 text-center border-bottom border-5">
     <h1 class="display-3">Task Board</h1>
     <p class="lead">A simple Kanban board for task management</p>
   </header>
+
+  
   <div class="container">
+    
+    <!-- Add task buttom -->
     <div class="text-center mb-5">
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add-task-modal">Add Task</button>
     </div>
+    
     <!-- Todo: Create a modal with a form to add tasks -->
     <div class="modal fade" id="add-task-modal" tabindex="-1" aria-labelledby="add-task-modalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -33,56 +39,71 @@
             <h5 class="modal-title" id="add-task-modalLabel">Add Task</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body
-          ">
+          <div class="modal-body">
+
+            <!-- add task window form  -->
             <form id="add-task-form">
+              <!-- Task Name label and input -->
               <div class="mb-3">
                 <label for="task-name" class="form-label">Task Name</label>
                 <input type="text" class="form-control" id="task-name" name="task-name" required />
               </div>
+              <!-- Task description label and input -->
               <div class="mb-3">
                 <label for="task-description" class="form-label">Task Description</label>
                 <textarea class="form-control" id="task-description" name="task-description" rows="3"></textarea>
               </div>
+              <!-- Task date  -->
               <div class="mb-3">
                 <label for="task-due-date" class="form-label">Due Date</label>
                 <input type="date" class="form-control" id="task-due-date" name="task-due-date" />
               </div>
+              <!-- Add Tak buttom in the add task window   -->
               <button type="submit" class="btn btn-primary">Add Task</button>
             </form>
           </div>
         </div>
       </div>
     </div>
-
+    
+    
     <div class="row swim-lanes text-center justify-content-between">
+      
+      <!-- Todo -->
       <div class="col-12 col-lg-4 d-flex">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">To Do</h2>
           </div>
           <div class="card-body bg-light">
-            <div id="todo-cards"></div>
+            <div id="todo-cards">
+            </div>
           </div>
         </div>
       </div>
+      
+    <!-- in-progress -->
       <div class="col-12 col-lg-4 d-flex">
         <div id="in-progress" class="card border-light mb-3 lane flex-grow-1">
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">In Progress</h2>
           </div>
           <div class="card-body bg-light">
-            <div id="in-progress-cards"></div>
+            <div id="in-progress-cards">
+            </div>
           </div>
         </div>
       </div>
+      
+      <!-- done -->
       <div class="col-12 col-lg-4 d-flex">
         <div id="done" class="card border-light mb-3 lane flex-grow-1">
           <div class="card-header bg-white">
             <h2 class="card-title mb-1">Done</h2>
           </div>
           <div class="card-body bg-light">
-            <div id="done-cards"></div>
+            <div id="done-cards">
+            </div>
           </div>
         </div>
       </div>
