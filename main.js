@@ -87,6 +87,7 @@ function handleAddTask(event) {
 function handleDeleteTask(event) {
   // get the task id and remove the task from the task list
   const taskId = $(this).data('id')
+  $(this).data('id'= const "aa";
   taskList = taskList.filter((task) => task.id !== taskId);
   localStorage.setItem("tasks", JSON.stringify(taskList));
   renderTaskList();
